@@ -1,0 +1,29 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.btn {
+  background-color: #3abd65;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:disabled,
+button[disabled] {
+  border: #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: auto;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
