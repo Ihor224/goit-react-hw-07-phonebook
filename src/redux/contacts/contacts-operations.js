@@ -9,7 +9,7 @@ import {
   fetchContactsRequest,
   fetchContactsSuccess,
   fetchContactsError,
-} from './items-actions';
+} from './contacts-actions';
 
 axios.defaults.baseURL = 'http://localhost:4040';
 
@@ -23,7 +23,7 @@ const fetchContacts = () => dispatch => {
 };
 
 const addContact = ({ name, number }) => dispatch => {
-  const item = {
+  const contact = {
     name,
     number,
   };
@@ -31,7 +31,7 @@ const addContact = ({ name, number }) => dispatch => {
   dispatch(addContactRequest());
 
   axios
-    .post('/contacts', item)
+    .post('/contacts', contact)
     .then(({ data }) => dispatch(addContactSuccess(data)))
     .catch(error => dispatch(addContactError(error)));
 };
